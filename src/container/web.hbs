@@ -1,0 +1,241 @@
+<div>
+  <h1>Languages:</h1>
+  <br> <hr>
+  <div>
+    {{#with web.languages}}
+      <div>
+        <ul>
+          <div>
+            {{#with [0]}}
+              <h2><em>HTML</em></h2>
+              <ul>
+                <li>
+                  <div> <abbr title="HTML">{{name}}</abbr></div>
+                  <div>Version: <abbr title="Versia HTML">{{version}}</abbr></div>
+                  <div>Description: {{description}}</div>
+                </li>
+                <br> <hr>
+
+                <div>
+                  <h3><em>Elements:</em></h3>
+                  {{#with elements}}
+                    <div>
+                      {{#with [0]}}
+                        <ul>
+                          <li>
+                            <div>{{name}}</div>
+                            <div>Description: {{description}}</div>
+                          </li> <br> <hr>
+
+                          <div>
+                            <h4><em>Attributes:</em></h4>
+                            {{#with attributes}}
+                              <div>
+                                {{#with [0]}}
+                                  <ul>
+                                    <li>
+                                      <div>{{name}}</div>
+                                      <div>Description: {{description}}</div>
+                                    </li> <br>
+                                  </ul>
+                                {{/with}}
+                              </div>
+
+                              <div>
+                                {{#with [1]}}
+                                  <ul>
+                                    <li>
+                                      <div>{{name}}</div>
+                                      <div>Description: {{description}}</div>
+                                    </li>
+                                  </ul>
+                                {{/with}}
+                              </div>
+                            {{/with}}
+                          </div>
+                        </ul>
+                      {{/with}}
+                    </div>
+                  {{/with}}
+                </div>
+              </ul>
+            {{/with}}
+          </div> <br> <hr> <br>
+
+          <div>
+            {{#with [1]}}
+              <h2><em>CSS</em></h2>
+              <ul>
+                <li>
+                  <div><abbr title="{{name}}">{{name}}</abbr></div>
+                  <div>Version: {{version}}</div>
+                  <div>Description: {{description}}</div>
+                </li> <br> <hr>
+
+                <div>
+                  <h3><em>Properties:</em></h3>
+                  <div>
+                    {{#with properties}}
+                      <div>
+                        {{#with [0]}}
+                          <ul>
+                            <li>
+                              <div>{{name}}</div>
+                              <div>Description: {{description}}</div>
+                            </li> <br> <hr>
+
+                            <div>
+                              <h4><em>Values:</em></h4>
+                              {{#with values}}
+                                <div>
+                                  {{#with [0]}}
+                                    <ul>
+                                      <li>
+                                        <div>{{value}}</div>
+                                        <div>Description: {{description}}</div>
+                                      </li>
+                                    </ul>
+                                  {{/with}}
+                                </div> <br>
+
+                                <div>
+                                  {{#with [1]}}
+                                    <ul>
+                                      <li>
+                                        <div>{{value}}</div>
+                                        <div>{{description}}</div>
+                                      </li> 
+                                    </ul> <br>
+                                    <hr>
+                                  {{/with}}
+                                </div>
+                              {{/with}}
+                            </div>
+                          </ul> 
+                        {{/with}}
+                      </div>
+                      
+                      <div>
+                        <h3><em>Background-color:</em></h3>
+                        {{#with [1]}}
+                          <ul>
+                            <li>
+                              <div>{{name}}</div>
+                              <div>{{description}}</div>
+                            </li> <br> <hr>
+
+                            <div>
+                              <h4><em>Values:</em></h4>
+                              {{#with values}}
+                                <div>
+                                  {{#with [0]}}
+                                    <ul>
+                                      <li>
+                                        <div>{{value}}</div>
+                                        <div>{{description}}</div>
+                                      </li>
+                                    </ul>
+                                  {{/with}}
+                                </div> <br>
+
+                                <div>
+                                  {{#with [1]}}
+                                    <ul>
+                                      <li>
+                                        <div>{{value}}</div>
+                                        <div>{{description}}</div>
+                                      </li>
+                                    </ul>
+                                  {{/with}}
+                                </div>
+                              {{/with}}
+                            </div>
+                          </ul>
+                        {{/with}}
+                      </div>
+                    {{/with}}
+                  </div>
+                </div>
+              </ul>
+            {{/with}}
+          </div> <br> <hr>
+
+          <div>
+            {{#with [2]}}
+              <h2><em>JavaScript</em></h2>
+              <ul>
+                <li>
+                  <div>{{name}}</div>
+                  <div>Verdion: {{version}}</div>
+                  <div>Description: {{description}}</div>
+                </li> <br> <hr>
+
+                <div>
+                  <h3><em>Functions:</em></h3>
+                  {{#with functions}}
+                    <div>
+                      {{#with [0]}}
+                        <ul>
+                          <li>
+                            <div>{{name}}</div>
+                            <div>{{description}}</div>
+                          </li> <br> <hr>
+
+                          <div>
+                            <h4><em>Parameters:</em></h4>
+                            {{#with parameters}}
+                              <div>
+                                {{#with [0]}}
+                                  <ul>
+                                    <li>
+                                      <div>{{name}}</div>
+                                      <div>{{type}}</div>
+                                      <div>{{description}}</div>
+                                    </li>
+                                  </ul>
+                                {{/with}}
+                              </div>
+                            {{/with}}
+                          </div> <br> <hr>
+                        </ul>
+                      {{/with}}
+                    </div>
+
+                    <div>
+                      <h4><em>GetElementById:</em></h4>
+                      {{#with [1]}}
+                        <ul>
+                          <li>
+                            <div>{{name}}</div>
+                            <div>{{description}}</div>
+                          </li> <br> <hr>
+
+                          <div>
+                            <h4><em>Parameters:</em></h4>
+                            {{#with parameters}}
+                              <div>
+                                {{#with [0]}}
+                                  <ul>
+                                    <li>
+                                      <div>{{name}}</div>
+                                      <div>{{type}}</div>
+                                      <div>{{description}}</div>
+                                    </li>
+                                  </ul>
+                                {{/with}}
+                              </div>
+                            {{/with}}
+                          </div>
+                        </ul>
+                      {{/with}}
+                    </div>
+                  {{/with}}
+                </div>
+              </ul>
+            {{/with}}
+          </div> <br> <hr>
+        </ul>
+      </div>
+    {{/with}}
+  </div>
+</div>
