@@ -1,0 +1,229 @@
+<main>
+  <h1><em class="badge rounded-pill text-bg-info">{{name}}</em></h1>
+  <br> <hr>
+   <div>
+    {{#with users}}
+      <section>
+        <h3><em>User:</em></h3>
+        <br>
+        {{#with [0]}}
+          {{> user data=id data=name data=gender data=age}}
+          <br> <hr>
+
+          <div>
+            <ul>
+              <h4><em class="badge text-bg-success">Friends:</em></h4>
+              {{#with friends}}
+
+                {{#with [0]}}
+                  {{> user data=id data=name data=gender data=age userLine=true}}
+                  <br>
+
+                  <ul>
+                    <h5><em class="badge text-bg-light">Mutual friends:</em></h5>
+                    {{#with mutual_friends}}
+                      {{#with [0]}}
+                        {{> user data=id data=name data=gender data=age userLine=true}}
+                      {{/with}}
+                    {{/with}}
+                  </ul>
+
+                {{/with}} 
+                <br>
+
+                {{#with [1]}}
+                  {{> user data=id data=naem data=gender data=age userLine=true}}
+                  <br>
+
+                  <ul>
+                    <h5><em class="badge text-bg-light">Mutual friends:</em></h5>
+                    {{#with mutual_friends}}
+                      {{#with [0]}}
+                        {{> user data=id data=naem data=gender data=age }}
+                      {{/with}}
+                    {{/with}}
+                  </ul>
+
+                {{/with}}
+
+              {{/with}}
+            </ul> <br> <hr>
+          </div>
+
+          <div>
+            <h3><em class="badge text-bg-primary">Groups:</em></h3>
+            <br>
+            {{#with groups}}
+              {{#with [0]}}
+                <div>
+                  <ul>
+                    <li>
+                      <div>{{id}}</div>
+                      <div>{{name}}</div>
+                      <div>{{description}}</div>
+                    </li> <br> <hr>
+
+                    <div>
+                      <h4><em class="badge text-bg-light">Members:</em></h4>
+                      {{#with members}}
+
+                        {{#with [0]}}
+                          {{> user data=id data=naem data=gender data=age}}
+                        {{/with}}
+
+                      {{/with}}
+                    </div> <br> <hr>
+
+                  </ul>
+                </div>
+                <br>
+              {{/with}}
+
+              {{#with [1]}}
+                <div>
+                  <ul>
+                    <li>
+                      <div>{{id}}</div>
+                      <div>{{name}}</div>
+                      <div>{{description}}</div>
+                    </li>
+                    <br>
+
+                    <div>
+                      <h4><em class="badge text-bg-light">Members:</em></h4>
+                      {{#with members}}
+
+                        {{#with [0]}}
+                          {{> user data=id data=naem data=gender data=age userLine=true}}
+                        {{/with}}
+                        <br> 
+
+                        {{#with [1]}}
+                          {{> user data=id data=naem data=gender data=age}}
+                        {{/with}}
+
+                      {{/with}}
+                      <br>
+                    </div>
+                  </ul>
+                </div>
+              {{/with}}
+
+            {{/with}}
+          </div>
+          <hr>
+        {{/with}}
+      </section>
+
+
+
+      <section>
+        <h3><em>User 2:</em></h3>
+        <br>
+        {{#with [1]}}
+        {{> user data=id data=name data=gender data=age}}
+        <br>
+        <hr>
+      
+        <div>
+          <ul>
+            <h4><em class="badge text-bg-success">Friends:</em></h4>
+            {{#with friends}}
+      
+              {{#with [0]}}
+                {{> user data=id data=name data=gender data=age userLine=true}}
+                <br>
+        
+                <ul>
+                  <h5><em class="badge text-bg-light">Mutual friends:</em></h5>
+                  {{#with mutual_friends}}
+
+                    {{#with [0]}}
+                      {{> user data=id data=name data=gender data=age userLine=true}}
+                    {{/with}}
+
+                    {{#with [1]}}
+                      {{> user data=id data=name data=gender data=age userLine=true}}
+
+                      <div>
+                        <ul>
+                          <h5><em class="badge text-bg-light">Mutual friends:</em></h5>
+                          {{#with mutual_friends}}
+                            {{#with [0]}}
+                              {{> user data=id data=name data=gender data=age }}
+                            {{/with}}
+                          {{/with}}
+                        </ul>
+                      </div>
+
+                    {{/with}}
+                  {{/with}}
+                </ul> <br><hr> <br>
+
+                <div>
+                  <h4><em class="badge text-bg-primary">Groups:</em></h4>
+                  <br>
+                  <div>
+                    {{#with groups}}
+                      <div>
+                        {{#with [0]}}
+                          <ul>
+                            <div>{{id}}</div>
+                            <div>{{name}}</div>
+                            <div>{{description}}</div>
+                            <br><hr>
+
+                            <div>
+                              <ul>
+                                <h5><em class="badge text-bg-light">Members:</em></h5>
+                                {{#with members}}
+                                {{#with [0]}}
+                                {{> user data=id data=name data=gender data=age userLine=true}}
+                                {{/with}}
+                                {{/with}}
+                              </ul>
+                            </div>
+                          </ul>
+                        {{/with}}
+                      </div><br>
+
+                      <div>
+                        {{#with [1]}}
+                          <ul>
+                            <div>{{id}}</div>
+                            <div>{{name}}</div>
+                            <div>{{description}}</div>
+                            <br> <hr>
+                            
+                            <div>
+                              <ul>
+                                <h5><em class="badge text-bg-light">Members:</em></h5>
+                                {{#with members}}
+                                  {{#with [0]}}
+                                    {{> user data=id data=name data=gender data=age userLine=true}}
+                                  {{/with}}
+
+                                  {{#with [1]}}
+                                    {{> user data=id data=name data=gender data=age }}
+                                  {{/with}}
+
+                                {{/with}}
+                              </ul>
+                            </div>
+                          </ul>
+                        {{/with}}
+                      </div>
+                      <hr>
+                    
+                    {{/with}}
+                  </div>
+                </div>
+              {{/with}}  
+            {{/with}}
+          </ul> 
+        </div>
+        {{/with}}
+      </section>
+    {{/with}}
+   </div>
+</main>
