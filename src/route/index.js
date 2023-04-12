@@ -890,7 +890,7 @@ router.get('/facebook', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('facebook', {
     layout: 'basic',
-    
+
     name: 'Facebook',
     users: [
       {
@@ -1038,6 +1038,9 @@ router.get('/facebook', function (req, res) {
         ],
       },
     ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 // ================================================================
 
 // Підключаємо роутер до бек-енду
