@@ -795,7 +795,7 @@ router.get('/mac', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
     layout: 'basic',
-    
+
     name: 'Apple MacBook Pro',
     description: 'The ultimate notebook for power users',
     price: 1999.99,
@@ -872,7 +872,10 @@ router.get('/mac', function (req, res) {
           price: 19.99,
         },
       ],
-      
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})  
 // ================================================================
 // ================================================================
 
