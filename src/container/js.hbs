@@ -1,0 +1,190 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+  <div>
+    <h1 ><em>{{name}}</em></h1>
+    <br> <hr>
+    <ul>
+      <div>{{name}}</div>
+      <div>{{description}}</div>
+      <br> <hr>
+
+      <div>
+        <h3><em>History:</em></h3>
+        {{#with history}}
+          <ul>
+            <li>
+              <div>{{year}}</div>
+              <div>{{founder}}</div>
+            </li>
+          </ul>
+        {{/with}}
+      </div> <br>
+      <hr>
+
+      <div>
+        <h3><em>Types:</em></h3>
+        {{#each types }}
+          <ul>
+            <li>
+              <div class="badge text-bg-light">{{this}}</div>
+            </li>
+          </ul>
+        {{/each}}
+      </div> <br> <hr> <br>
+
+      <div>
+        <h3><em>Syntax:</em></h3>
+        <br>
+        {{#with syntax}}
+          <ul >
+            <div>
+              <h4><em>Variables:</em></h4>
+              {{#each variables}}
+                <ul>
+                  <li>
+                    <div class="badge text-bg-light">{{this}}</div>
+                  </li>
+                </ul>
+              {{/each}}
+            </div> <br>
+
+            <div>
+              <h4><em>Functions:</em></h4>
+              {{#each functions}}
+                <ul>
+                  <li>
+                    <div class="badge text-bg-light">{{this}}</div>
+                  </li>
+                </ul>
+              {{/each}}
+            </div> <br>
+
+            <div>
+              <h4><em>Conditionals:</em></h4>
+              {{#each conditionals}}
+                <ul>
+                  <li>
+                    <div class="badge text-bg-light">{{this}}</div>
+                  </li>
+                </ul>
+              {{/each}}
+            </div> <br>
+
+            <div>
+              <h4><em>Loops:</em></h4>
+              {{#each loops}}
+                <ul>
+                  <li>
+                    <div class="badge text-bg-light">{{this}}</div>
+                  </li>
+                </ul>
+              {{/each}}
+            </div> <br>
+
+            <div>
+              <h4><em>Classes:</em></h4>
+              {{#each classes}}
+                <ul>
+                  <li>
+                    <div class="badge text-bg-light">{{this}}</div>
+                  </li>
+                </ul>
+              {{/each}}
+            </div>
+          </ul>
+        {{/with}}
+      </div> <br> <hr>
+
+      <div>
+        <h4><em>Features:</em></h4>
+        {{#each features}}
+          <ul>
+            <li>
+              <div class="badge text-bg-light">{{this}}</div>
+            </li>
+          </ul>
+        {{/each}}
+      </div> <br>
+
+      <div>
+        <h4><em>Libraries:</em></h4>
+        {{#each libraries}}
+          <ul>
+            <li>
+              <div class="badge text-bg-light">{{this}}</div>
+            </li>
+          </ul>
+        {{/each}}
+      </div> <br>
+
+      <div>
+        <h4><em>Tools:</em></h4>
+        {{#each tools}}
+          <ul>
+            <li>
+              <div class="badge text-bg-light">{{this}}</div>
+            </li>
+          </ul>
+        {{/each}}
+      </div> <br>
+
+      <div>
+        <h4><em>Community:</em></h4>
+        {{#with community}}
+          <div>
+            {{#with [0]}}
+              <ul>
+                <li>
+                  <div>{{name}}</div>
+                  <div>{{type}}</div>
+                </li>
+              </ul>
+            {{/with}}
+          </div> <br>
+
+          <div>
+            {{#with [1]}}
+              <ul>
+                <li>
+                  <div>{{name}}</div>
+                  <div>{{type}}</div>
+                </li>
+              </ul>
+            {{/with}}
+          </div> <br>
+
+          <div>
+            {{#with [2]}}
+              <ul>
+                <li>
+                  <div>{{name}}</div>
+                  <div>{{type}}</div>
+                </li>
+              </ul>
+            {{/with}}
+          </div> <br>
+
+          <div>
+            {{#with [3]}}
+              <ul>
+                <li>
+                  <div>{{name}}</div>
+                  <div>{{type}}</div>
+                </li>
+              </ul>
+            {{/with}}
+          </div>
+        {{/with}}
+      </div>
+    </ul>
+  </div>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
