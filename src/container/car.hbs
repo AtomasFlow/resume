@@ -5,10 +5,10 @@
 <div>
   <ul>
     {{#with features}}
-      <div>
+      <div class="mb-4">
         {{#with interior}}
-          <div>
-            <div>
+          <div class="mb-4">
+            <div class="mb-4">
               <h4><em>Seats</em></h4>
               {{#with seats}}
                 <ul>
@@ -28,18 +28,17 @@
                 </ul>
               {{/with}}
             </div>
-            <br> <hr>
+            <hr>
             
-            <div>
+            <div class="mb-5">
               <h4><em>Dashboard</em></h4>
               {{#with dashboard}}
                 <ul>
-                  <li>
+                  <li class="mb-3">
                     <div>{{material}} / {{color}}</div>
                   </li>
-                  <br>
 
-                  <div>
+                  <div class="mb-4">
                     <h5><em class="badge rounded-pill text-bg-light">Display</em></h5>
                     {{#with display}}
                       <ul>
@@ -50,12 +49,12 @@
                         </li>
                       </ul>
                     {{/with}}
-                  </div> <br>
+                  </div>
                 </ul>
               {{/with}}
-            </div><br> <hr>
+            </div> <hr>
 
-            <div>
+            <div class="mb-4">
               <h4><em>Audio:</em></h4>
               {{#with audio}}
               <ul>
@@ -79,14 +78,14 @@
               {{/with}}
             </div>
           </div>
-          <br> <hr>
+          <hr>
         {{/with}}
 
-        <div>
-          <h4><em>Exterior:</em></h4>
-          <br>
+        <div class="mb-5">
+          <h4 class="mb-4"><em>Exterior:</em></h4>
+          
           {{#with exterior}}
-            <div>
+            <div class="mb-4">
               {{#with wheels}}
                 <ul>
                   <h5><em class="badge rounded-pill text-bg-light">Wheels:</em></h5>
@@ -97,9 +96,9 @@
                   </ul>
                 </ul>
               {{/with}}
-            </div> <br>
+            </div>
 
-            <div>
+            <div class="mb-4">
               {{#with headlights}}
                 <ul>
                   <h5><em class="badge rounded-pill text-bg-light">Headlights:</em></h5>
@@ -114,9 +113,9 @@
                   </ul>
                 </ul>
               {{/with}}
-            </div> <br>
+            </div>
 
-            <div>
+            <div class="mb-4">
               {{#with sunroof}}
                 <ul>
                   <h4><em class="badge rounded-pill text-bg-light">Sunroof:</em></h4>
@@ -134,13 +133,13 @@
             </div>
           {{/with}}
         </div>
-        <br> <hr>
+        <hr>
 
         <div>
-          <h3><em>Safety:</em></h3>
-          <br>
+          <h3 class="mb-4"><em>Safety:</em></h3>
+          
           {{#with safety}}
-            <div>
+            <div class="mb-4">
               <ul>
                 <h5><em class="badge rounded-pill text-bg-light">Airbags:</em></h5>
                 {{#with airbags}}
@@ -151,7 +150,7 @@
                 </ul>
                 {{/with}}
               </ul>
-            </div> <br>
+            </div>
 
             <div>
               <ul>
@@ -187,22 +186,19 @@
             </div>
           {{/with}}
         </div>
-      </div> <br> <hr>
-
-      
+      </div> <hr>
     {{/with}}
 
     <div>
-      <h4><em>Engine:</em></h4>
-      <br>
+      <h4 class="mb-4"><em>Engine:</em></h4>
+      
       {{#with engine}}
         <ul>
-          <li>
+          <li class="mb-3">
             <divs>{{type}} / {{displacement}} / {{horsepower}} / {{torque}}</divs>
           </li>
-          <br>
 
-          <div>
+          <div class="mb-4">
             <h5><em class="badge rounded-pill text-bg-light">Transmission:</em></h5>
             {{#with transmission}}
               <ul>
@@ -214,9 +210,9 @@
           </div>
         </ul>
       {{/with}}
-    </div> <br> <hr>
+    </div> <hr>
 
-    <div>
+    <div class="mb-4">
       <h4><em>Fuel economy:</em></h4>
       {{#with fuel_economy}}
       <ul>
@@ -225,18 +221,17 @@
         </li>
       </ul>
     {{/with}}
-    </div> <br> <hr>
+    </div><hr>
 
     <div>
       <h2><em class="badge rounded-pill text-bg-dark">Price:</em></h2>
       {{#with price}}
         <ul>
-          <li>
+          <li class="mb-3">
             <div>{{base}} / {{destination}}</div>
           </li>
-          <br>
 
-          <div>
+          <div class="mb-4">
             <h5><em class="badge rounded-pill text-bg-light">Options:</em></h5>
             {{#with options}}
               <ul>
@@ -245,9 +240,9 @@
                 </li>
               </ul>
             {{/with}}
-          </div> <br> <hr>
+          </div> <hr>
 
-          <div>
+          <div class="mb-4">
             <h4><em class="badge rounded-pill text-bg-dark">Total:</em></h4>
             <ul>
               <li>
@@ -255,7 +250,7 @@
               </li>
             </ul>
           </div>
-          <br>
+          
           <hr>
         </ul>
       {{/with}}
