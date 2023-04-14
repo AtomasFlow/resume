@@ -1,23 +1,22 @@
 <main>
-  <h1><em class="badge rounded-pill text-bg-info">{{name}}</em></h1>
-  <br> <hr>
+  <h1 class="mb-4"><em class="badge rounded-pill text-bg-info">{{name}}</em></h1>
+  <hr>
    <div>
     {{#with users}}
       <section>
-        <h3><em>User:</em></h3>
-        <br>
+        <h3 class="mb-4"><em>User:</em></h3>
+        
         {{#with [0]}}
           {{> user data=id data=name data=gender data=age}}
-          <br> <hr>
+          <hr>
 
-          <div>
+          <div class="mb-5">
             <ul>
               <h4><em class="badge text-bg-success">Friends:</em></h4>
               {{#with friends}}
 
                 {{#with [0]}}
                   {{> user data=id data=name data=gender data=age userLine=true}}
-                  <br>
 
                   <ul>
                     <h5><em class="badge text-bg-light">Mutual friends:</em></h5>
@@ -28,15 +27,13 @@
                     {{/with}}
                   </ul>
 
-                {{/with}} 
-                <br>
+                {{/with}}
 
                 {{#with [1]}}
                   {{> user data=id data=naem data=gender data=age userLine=true}}
-                  <br>
 
                   <ul>
-                    <h5><em class="badge text-bg-light">Mutual friends:</em></h5>
+                    <h5 class="mb-3"><em class="badge text-bg-light">Mutual friends:</em></h5>
                     {{#with mutual_friends}}
                       {{#with [0]}}
                         {{> user data=id data=naem data=gender data=age }}
@@ -47,23 +44,23 @@
                 {{/with}}
 
               {{/with}}
-            </ul> <br> <hr>
+            </ul> <hr>
           </div>
 
           <div>
-            <h3><em class="badge text-bg-primary">Groups:</em></h3>
-            <br>
+            <h3 class="mb-4"><em class="badge text-bg-primary">Groups:</em></h3>
+            
             {{#with groups}}
               {{#with [0]}}
                 <div>
                   <ul>
-                    <li>
+                    <li class="mb-4">
                       <div>{{id}}</div>
                       <div>{{name}}</div>
                       <div>{{description}}</div>
-                    </li> <br> <hr>
+                    </li> <hr>
 
-                    <div>
+                    <div class="mb-4">
                       <h4><em class="badge text-bg-light">Members:</em></h4>
                       {{#with members}}
 
@@ -72,22 +69,20 @@
                         {{/with}}
 
                       {{/with}}
-                    </div> <br> <hr>
-
+                    </div> <hr>
                   </ul>
                 </div>
-                <br>
+                
               {{/with}}
 
               {{#with [1]}}
                 <div>
                   <ul>
-                    <li>
+                    <li class="mb-4">
                       <div>{{id}}</div>
                       <div>{{name}}</div>
                       <div>{{description}}</div>
                     </li>
-                    <br>
 
                     <div>
                       <h4><em class="badge text-bg-light">Members:</em></h4>
@@ -118,11 +113,11 @@
 
 
       <section>
-        <h3><em>User 2:</em></h3>
-        <br>
+        <h3 class="mb-4"><em>User 2:</em></h3>
+        
         {{#with [1]}}
         {{> user data=id data=name data=gender data=age}}
-        <br>
+        
         <hr>
       
         <div>
@@ -132,9 +127,8 @@
       
               {{#with [0]}}
                 {{> user data=id data=name data=gender data=age userLine=true}}
-                <br>
         
-                <ul>
+                <ul class="mb-4">
                   <h5><em class="badge text-bg-light">Mutual friends:</em></h5>
                   {{#with mutual_friends}}
 
@@ -158,20 +152,20 @@
 
                     {{/with}}
                   {{/with}}
-                </ul> <br><hr> <br>
+                </ul> <hr>
 
                 <div>
-                  <h4><em class="badge text-bg-primary">Groups:</em></h4>
-                  <br>
+                  <h4 class="mb-4"><em class="badge text-bg-primary">Groups:</em></h4>
+                  
                   <div>
                     {{#with groups}}
-                      <div>
+                      <div class="mb-4">
                         {{#with [0]}}
                           <ul>
                             <div>{{id}}</div>
                             <div>{{name}}</div>
                             <div>{{description}}</div>
-                            <br><hr>
+                            <hr>
 
                             <div>
                               <ul>
@@ -185,15 +179,15 @@
                             </div>
                           </ul>
                         {{/with}}
-                      </div><br>
+                      </div>
 
-                      <div>
+                      <div class="mb-4">
                         {{#with [1]}}
                           <ul>
                             <div>{{id}}</div>
                             <div>{{name}}</div>
                             <div>{{description}}</div>
-                            <br> <hr>
+                            <hr>
                             
                             <div>
                               <ul>
@@ -214,7 +208,6 @@
                         {{/with}}
                       </div>
                       <hr>
-                    
                     {{/with}}
                   </div>
                 </div>
