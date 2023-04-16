@@ -1,0 +1,61 @@
+<main>
+  {{!=============== navigation ===============}}
+
+  {{!-- ↙ Перенесу component послe commit "shopproduct" --}}
+
+  {{!=============== breadcrumb ===============}}
+
+  {{> breadcrumb data=breadcrumb}}
+  
+
+  {{!=============== newsData ===============}}
+
+  {{#with newsData}}
+  <section class="col-12 my-5">
+    <img class="card-img-top mb-5" src="{{photo}}" alt="Foto">
+    
+    <section>
+      {{#with head}}
+      <div class="py-4">
+        <h1>{{heading}}</h1>
+        <p>{{description}}</p>
+      </div>
+      {{/with}}
+
+      {{#each body}}
+      <div class="py-2 {{#if @last}} py-0 {{/if}}">
+        <h3>{{title}}</h3>
+        <p>{{text}}</p>
+      </div>
+      {{/each}}
+    </section>
+    
+  </section>
+  {{/with}}
+  <hr>
+
+  {{!=============== newsOtherBlock ===============}}
+  
+  {{#with newsOtherBlock}}
+  <section class="col-12 my-5">
+    <h2 class="mb-4">{{title}}</h2>
+    {{> shophome data=cards}}
+  </section>
+  {{/with}}
+
+
+
+  {{!=============== service ===============}}
+ 
+  <section>
+    {{> shopservices data=service}}
+  </section>
+  <hr>
+
+  {{!=============== Footer ===============}}
+
+  {{!-- ↙ Перенесу component послe commit "shopproduct" --}}
+
+
+
+</main>

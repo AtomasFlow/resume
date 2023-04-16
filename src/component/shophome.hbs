@@ -1,0 +1,21 @@
+<div class="col-12">
+  <div class="row g-4">
+    {{#each data}}
+    <div class="col-3">
+      <div class="card bg-secondary bg-gradient text-light">
+  
+        <div class="card-header">
+          {{title}}
+          {{#if idNew}} <span class="badge bg-success rounded-pill">New</span> {{/if}}
+          {{#if isTop}} <span class="badge bg-danger rounded-pill">Top</span> {{/if}}
+        </div>
+  
+        <div class="card-body">
+          <p class="card-text">{{description}}</p>
+        </div>
+        
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
