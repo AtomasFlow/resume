@@ -1,0 +1,14 @@
+{{#with data}}
+<div class="col-12">
+  <div class="card">
+    <div class="card-body bg-success text-center">
+      <h2 class="mb-2">{{title}}</h2>
+      <p class="card-text">{{description}}</p>
+
+      {{#each buttons}}
+      <a class="btn btn-primary" href="{{link}}" rel="{{rel}}">{{text}}</a>
+      {{/each}}
+    </div>
+  </div>
+</div>
+{{/with}}

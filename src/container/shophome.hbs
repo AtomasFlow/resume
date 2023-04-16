@@ -1,5 +1,6 @@
 <main>
-  {{#with navigation}}
+  {{> shopheader data=navigation}}
+  {{!-- {{#with navigation}}
     <section class="col-12 mb-5">
       <div class="card">
         <div class="nav">
@@ -16,7 +17,7 @@
         </div>
       </div>
     </section>
-  {{/with}}
+  {{/with}} --}}
 
 
   {{#with newsBlock}}
@@ -61,27 +62,7 @@
     </div>
     
     <div class="row">
-      {{#each cards}}
-      <div class="col-4 g-4">
-        <div class="card">
-          <img class="card-img-top" src="{{image}}" alt="Foto">
-          <div class="card-body">
-            <div class="card-title">
-              <p class="mb-0">{{title}}
-              {{#if isHot}}
-              <span class="badge rounded-pill bg-warning text-uppercase">hot!</span>
-              {{/if}}
-
-              {{#if isNew}}
-              <span class="badge rounded-pill bg-primary ">Nwe</span>
-              {{/if}}
-              </p>
-            </div>
-            <p class="card-text">{{description}}</p>
-          </div>
-        </div>
-      </div>
-      {{/each}}
+      {{> shopcard data=cards}}
     </div>
     
   </section>
@@ -108,60 +89,12 @@
   
   
   <section class="col-12 my-5">
-    {{#with service}}
-    <div class="card bg-success text-center text-light">
-      <div class="card-body">
-        <h2>{{title}}</h2>
-        <p class="card-text">{{description}}</p>
-        
-        {{#each buttons}}
-        <div><button class="btn btn-primary"><a href="{{link}}"></a>{{text}}</button></div>
-        {{/each}}
-      </div>
-    </div>
-    {{/with}}
+    {{> shopaction data=service}}
   </section>
   <hr>
 
 
-  <section class="col-12 row g-5">
-    {{#with footer}}
-
-    <div class="col-2 ">
-      {{#each [0]}}
-      <a class="btn btn-link " href="{{link}}">{{text}}</a>
-      {{/each}}
-      <a class="btn btn-link disabled" href="#">Disabled</a>
-    </div>
-  
-    <div class="col-2 ">
-      {{#each [1]}}
-      <a class="btn btn-link " href="{{link}}">{{text}}</a>
-      {{/each}}
-      <a class="btn btn-link disabled" href="#">Disabled</a>
-    </div>
-
-    <div class="col-2 ">
-      {{#each [2]}}
-      <a class="btn btn-link " href="{{link}}">{{text}}</a>
-      {{/each}}
-      <a class="btn btn-link disabled" href="#">Disabled</a>
-    </div>
-
-    <div class="col-2 ">
-      {{#each [3]}}
-      <a class="btn btn-link " href="{{link}}">{{text}}</a>
-      {{/each}}
-      <a class="btn btn-link disabled" href="#">Disabled</a>
-    </div>
-
-    <div class="col-2 ">
-      {{#each [4]}}
-      <a class="btn btn-link " href="{{link}}">{{text}}</a>
-      {{/each}}
-      <a class="btn btn-link disabled" href="#">Disabled</a>
-    </div>
-
-    {{/with}}
+  <section class="col-12 row g-5 my-5">
+    {{> shopfooter data=footer}}
   </section>
 </main>

@@ -1,0 +1,135 @@
+<main>
+  {{> shopheader data=navigation}}
+  <hr>
+
+  {{!=========== breadcrumb ================}}
+  <section class="col-12 my-4">
+    <ol class="breadcrumb">
+      {{#each breadcrumb}}
+      <li class="breadcrumb-item nav">
+
+        {{!-- //                  ↙ Без  nav-link            ( ↙ disabled не працюэ) --}}
+        <a class="{{#if @last}} nav-link px-0 py-0 disabled {{/if}}" href="{{#if url}} {{url}} {{/if}}" >{{name}} </a>
+      </li>
+      {{/each}}
+    </ol>
+  </section>
+  <hr>
+  
+  {{!=========== productData ================}}
+  <section class="col-12 row my-5">
+    {{#with productData}}
+    <div class="col-6 mb-4 me-4">
+      <img class="card-img-top mb-4" src="{{img}}" alt="Foto">
+      <div class="card">
+        <div class="card-body">
+          {{#with info}}
+          <div class="card-title">{{title}}</div>
+          <p class="card-text">{{about}}</p>
+          <div class="mb-2"><strong>{{price}}</strong></div>
+
+          <p class="mb-0">
+            {{#each category}}
+             <span class=" badge rounded-pill card-text
+              {{#if isHot}} bg-warning text-uppercase {{/if}}
+              {{#if isNew}} bg-primary {{/if}}
+              {{#if isBonus}} bg-info {{/if}}">
+              {{name}}
+             </span> 
+            {{/each}}
+          </p>
+          {{/with}}
+        </div>
+      </div>
+    </div>
+    
+    {{!=========== Table ================}}
+    <div class="col-5 ms-5 mb-4">
+      {{#with item}}
+      <div class="mb-4">
+        <table class="table">
+          <thead>
+            <tr>
+              {{#each head}}
+              <th>{{this}}</th>
+              {{/each}}
+            </tr>
+          </thead>
+
+          <tbody class="table-group-divider">
+            {{#each body}}
+            <tr>
+              <th>{{[0]}}</th>
+              <td>{{[1]}}</td>
+              <td>{{[2]}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+      {{/with}}
+
+      {{#with param}}
+      <div class="card mb-4">
+        <div class="card-header">{{title}}</div>
+        <div>
+          <ul class="list-group">
+            {{#each list}}
+            <li class="list-group-item">{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      {{/with}}
+      
+      {{!================ Alert ================}}
+      <div class="alert alert-danger">
+        {{#with alert}}
+        {{#if isError}} {{text}} {{/if}}
+        {{/with}}
+      </div>
+    </div>
+    
+    {{!================  ================}}
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          {{#each actionList}}
+          <button class="btn me-3
+            {{#if isWarning}} btn-warning {{/if}}
+            {{#if isError}} btn-outline-danger {{/if}}
+            {{#if isSuccess}} btn-success {{/if}}
+            {{#if isGood}} btn-outline-success {{/if}}">
+            {{name}}
+          </button>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    {{/with}}
+  </section>
+  <hr>
+
+  {{!================ Cards ================}}
+
+  {{#with goodsOtherBlock}}
+  <section class="col-12 row my-5">
+    <h2 class="mb-4">{{title}}</h2>
+    {{> shopcard data=cards}}
+  </section>
+  {{/with}}
+  <hr> 
+
+
+
+  <section class="col-12 my-5">
+    {{> shopaction data=service}}
+  </section>
+  <hr>
+
+
+
+  <section class="col-12">
+    {{> shopfooter data=footer}}
+  </section>
+</main>
