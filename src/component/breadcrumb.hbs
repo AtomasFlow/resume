@@ -1,0 +1,9 @@
+<div class="col-12">
+  <ol class="breadcrumb mb-5">
+    {{#each data}}
+    <li class="breadcrumb-item nav">
+      <a class="nav-link px-0 py-0 {{#if @last}} disabled {{/if}}" href="{{#if url}} {{url}} {{/if}}">{{name}}</a>
+    </li>
+    {{/each}}
+  </ol>
+</div>
