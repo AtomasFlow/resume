@@ -1,0 +1,38 @@
+{{#with data}}
+<div class="row col-12">
+  <div class="col-2">
+    {{#each [0]}}
+    <a class="btn btn-link pe-5" href="{{link}}">{{text}}</a>
+    {{/each}}
+    <a class="btn btn-link disabled pe-5" href="#">Disabled</a>
+  </div>
+
+  <div class="col-2">
+    {{#each [1]}}
+    <a class="btn btn-link pe-5" href="{{link}}">{{text}}</a>
+    {{/each}}
+    <a class="btn btn-link disabled pe-5" href="#">Disabled</a>
+  </div>
+
+  <div class="col-2">
+    {{#each [2]}}
+    <a class="btn btn-link pe-5" href="{{link}}">{{text}}</a>
+    {{/each}}
+    <a class="btn btn-link disabled pe-5" href="#">Disabled</a>
+  </div>
+
+  <div class="col-2">
+    {{#each [3]}}
+    <a class="btn btn-link pe-3 {{#if @first }} pe-5 {{/if}}" href="{{link}}">{{text}}</a>
+    {{/each}}
+    <a class="btn btn-link disabled pe-5" href="#">Disabled</a>
+  </div>
+
+  <div class="col-2">
+    {{#each [4]}}
+    <a class="btn btn-link pe-" href="{{link}}">{{text}}</a>
+    {{/each}}
+    <a class="btn btn-link disabled pe-5" href="#">Disabled</a>
+  </div>
+</div>
+{{/with}}

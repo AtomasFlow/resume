@@ -1,0 +1,22 @@
+{{#each data}}
+<div class="col-4">
+  <div class="card">
+    <img class="card-img-top" src="{{image}}" alt="Foto">
+    <div class="card-body">
+      <div class="card-title">{{title}}</div>
+      <p class="card-text">{{description}}</p>
+
+      <p class="my-0">
+        {{#if isHot}}
+        <span class="badge rounded-pill bg-warning text-uppercase">hot</span>
+        {{/if}}
+      
+        {{#if idNew}}
+        <span class="badge rounded-pill bg-primary">New</span>
+        {{/if}}
+      </p>
+
+    </div>
+  </div>
+</div>
+{{/each}}
