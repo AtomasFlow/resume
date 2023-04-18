@@ -1,0 +1,10 @@
+{{#each data}}
+<div>
+  <button class="btn mb-2
+    {{#if @last}} mb-0 {{/if}}
+    {{#if isPrimary}} btn-primary {{/if}}
+    {{#if isOutline}} btn-outline-primary {{/if}}">
+    {{text}}
+  </button>
+</div>
+{{/each}}
