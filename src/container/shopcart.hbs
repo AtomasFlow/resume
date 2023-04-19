@@ -17,7 +17,9 @@
 
 {{!--========== goodsBlock ========== --}}
 
-  {{> cartGoodsitem data=goodsBlock}}
+  {{#each goodsBlock}}
+  {{> cartGoodsitem}}
+  {{/each}}
   <hr>
 
 {{!--========== total ========== --}}
