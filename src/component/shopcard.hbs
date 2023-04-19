@@ -1,22 +1,26 @@
-{{#each data}}
+{{#with data}}
+<h2 class="mb-4">{{title}}</h2>
+{{#each cards}}
 <div class="col-4">
   <div class="card">
     <img class="card-img-top" src="{{image}}" alt="Foto">
     <div class="card-body">
-      <div class="card-title">{{title}}</div>
-      <p class="card-text">{{description}}</p>
+      <div class="card-title">
+        <b>{{title}}</b>
 
-      <p class="my-0">
         {{#if isHot}}
-        <span class="badge rounded-pill bg-warning text-uppercase">hot</span>
+        <span class="badge rounded-pill bg-warning text-uppercase ms-2">hot</span>
         {{/if}}
-      
+
         {{#if idNew}}
         <span class="badge rounded-pill bg-primary">New</span>
         {{/if}}
-      </p>
+
+      </div>
+      <p class="card-text">{{description}}</p>
 
     </div>
   </div>
 </div>
 {{/each}}
+{{/with}}
