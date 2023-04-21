@@ -9,7 +9,7 @@
 
   {{!--================================↙↙↙↙↙ purchase ===================================== --}}
   {{#with purchase}}
-  <div class="mb-4">
+  <div class="mb-5">
     
     <div class="mb-4">
       <ul class="nav nav-tabs">
@@ -24,7 +24,7 @@
     </div>
 
     {{#with actionBlock}}
-    <div class="row">
+    <div class="row mb-4">
       {{#with input}}
       <div class="col-4">
         <input class="form-control" placeholder="{{placeholder}}" type="text">
@@ -43,7 +43,16 @@
       </div>
     </div>
     {{/with}}
+    <hr>
+
+    {{!--============↙↙↙↙↙ itemList ============= --}}
+
+    {{#each itemList}}
+    {{> purchaseItem}}
+    {{/each}}
     
+
+    {{!--============↑↑↑↑↑↑ itemList ============= --}}
   </div>
   {{/with}}
   <hr>

@@ -1,0 +1,29 @@
+<div class="row mb-3">
+
+  <div class="col-4">
+    <p class="mb-2">{{number}}</p>
+    <b>{{status}}</b>
+  </div>
+
+  {{#with amount}}
+  <div class="col-1">
+    <p class="mb-2">{{title}}</p>
+    <b>{{value}}</b>
+  </div>
+  {{/with}}
+
+  <div class="col-5">
+    {{#each images}}
+    <img src="{{this}}" alt="Foto">
+    {{/each}}
+  </div>
+
+
+  {{#with button}}
+  <div class="col-2 d-flex align-items-center">
+    <a class="btn {{#if isPrimary}} btn-primary {{/if}}" href="{{link}}">{{text}}</a>
+  </div>
+  {{/with}}
+
+</div>
+<hr class="mb-0 pb-3">
