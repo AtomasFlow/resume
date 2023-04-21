@@ -2,37 +2,32 @@
 <div class="row col-12">
   <div class="col-2 nav">
     {{#each [0]}}
-    <a class="btn nav-link pe-5" href="{{link}}">{{text}}</a>
+    <a class="nav-link pe-5 {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
     {{/each}}
-    <a class="btn btn-link nav-link disabled pe-5" href="#">Disabled</a>
   </div>
 
   <div class="col-2 nav">
     {{#each [1]}}
-    <a class="btn nav-link pe-5" href="{{link}}">{{text}}</a>
+    <a class="nav-link pe-5 {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
     {{/each}}
-    <a class="btn btn-link nav-link disabled pe-5" href="#">Disabled</a>
   </div>
 
   <div class="col-2 nav">
     {{#each [2]}}
-    <a class="btn nav-link pe-5" href="{{link}}">{{text}}</a>
+    <a class="nav-link pe-5 {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
     {{/each}}
-    <a class="btn btn-link nav-link disabled pe-5" href="#">Disabled</a>
   </div>
 
   <div class="col-2 nav">
     {{#each [3]}}
-    <a class="btn nav-link pe-3 {{#if @first }} pe-5 {{/if}}" href="{{link}}">{{text}}</a>
+    <a class="nav-link pe-5 {{#if @last}}  disabled {{/if}}" href="{{link}}">{{text}}</a>
     {{/each}}
-    <a class="btn btn-link nav-link disabled pe-5" href="#">Disabled</a>
   </div>
 
   <div class="col-2 nav">
     {{#each [4]}}
-    <a class="btn nav-link pe-" href="{{link}}">{{text}}</a>
+    <a class="nav-link pe-5 {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
     {{/each}}
-    <a class="btn btn-link nav-link disabled pe-5" href="#">Disabled</a>
   </div>
 </div>
 {{/with}}
