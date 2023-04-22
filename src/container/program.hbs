@@ -1,17 +1,17 @@
 <div>
   {{#with program}}
     {{#with excursion}}
-      <h1>Excursion</h1>
+      <h1 class="mb-4">Excursion</h1>
       <hr>
-      <h2>{{name}}</h2>
+      <h2 class="mb-4">{{name}}</h2>
       <h3><em>Location:</em></h3>
       {{#with location}}
         <ul>
-          <li>
+          <li class="mb-4">
             <div>{{city}} / {{country}}</div>
             <div><u>Date: {{../date}}</u></div>
           </li>
-          <br> <hr>
+          <hr>
         </ul>
       {{/with}}
 
@@ -19,39 +19,39 @@
         <h3><em>Program:</em></h3>
         {{#with program}}
           {{#with [0]}}
-            <ul>
-              <li>
+            <ul class="mb-4">
+              <li class="mb-4">
                 <div>{{name}}</div>
                 <div>Type: {{type}}</div>
                 <div>Duration: {{duration}} hours</div>
               </li>
-              <br> <hr>  <hr> <br>
+              <hr><hr>
 
               <div>
-                <h2><em>Details:</em></h2> <hr> <br>
+                <h2 class="my-5"><em>Details:</em></h2> <hr>
                 <ul>
                 {{#with details}}
                   <div>
                     {{#with museum}}
-                      <div><h3><em>Museum:</em></h3> <u>{{name}}</u></div>
+                      <div class="mb-4"><h3><em>Museum:</em></h3> <u>{{name}}</u></div>
                       <div>
                         <ul>
-                          <h4><em>Location:</em></h4>
+                          <h4 class="mb-2"><em>Location:</em></h4>
                           {{#with location}}
-                            <address>
+                            <address class="mb-4">
                               <ul>
                                 <li>
                                   <div>{{address}} // {{city}} // {{country}}</div>
                                 </li>
                               </ul>
                             </address>
-                            <br> <hr>
+                            <hr>
                           {{/with}}
 
-                          <div>
+                          <div class="mb-5">
                             <h4><em>Exhibits:</em></h4>
                             {{#with exhibits}}
-                              <div>
+                              <div class="mb-4">
                                 {{#with [0]}}
                                   <ul>
                                     <li>
@@ -66,7 +66,7 @@
                                     </li>
                                   </ul>
                                 {{/with}}
-                              </div> <br>
+                              </div>
 
                               <div>
                                 {{#with [1]}}
@@ -88,14 +88,14 @@
                                 {{/with}}
                               </div>
                             {{/with}}
-                          </div> <br> <hr> <br>
+                          </div> <hr>
                         </ul>
                       </div> 
 
                     {{/with}}
                   </div>
 
-                  <div>
+                  <div class="mb-4">
                     {{#with guide}}
                       <h3><em>Guide:</em></h3>
                       <ul>
@@ -106,11 +106,11 @@
                         </li> 
                       </ul> 
                     {{/with}}
-                  </div> <br> <hr>
+                  </div><hr>
                 {{/with}}
                 </ul>
               </div>
-            </ul> <br>
+            </ul>
           {{/with}}
 
           <div>
@@ -118,30 +118,30 @@
               <ul>
                 <h3><em>Show:</em></h3>
                   <ul>
-                    <li>
+                    <li class="mb-4">
                       <div>{{name}}</div>
                       <div>{{type}}</div>
                       <div>Duration: {{duration}} hours</div>
-                    </li> <br> <hr>
+                    </li> <hr>
 
                     <div>
                       <h4><em>Details:</em></h4>
                       {{#with details}}
                         {{#with venue}}
                           <ul>
-                            <li>
+                            <li class="mb-4">
                               <div>{{name}}</div>
                             </li>
 
                             <div>
-                              <h4><em>Location:</em></h4>
+                              <h4 ><em>Location:</em></h4>
                               {{#with location}}
                               <address>
                                   <ul>
                                     <li>
                                       <div>{{address}} // {{city}} // {{country}}</div>
                                     </li>
-                                  </ul> <br> <hr>
+                                  </ul> <hr>
                                 </address>
                               {{/with}}
                             </div>
@@ -150,9 +150,9 @@
 
                         <div>
                           {{#with performers}}
-                            <div>
+                            <div class="mb-3">
                               {{#with [0]}}
-                                <h4><em>Performers:</em></h4>
+                                <h4 class="mb-4"><em>Performers:</em></h4>
                                 <ul>
                                   <li>
                                     <div><u>{{name}}</u></div>
@@ -160,9 +160,9 @@
                                   </li>
                                 </ul>
                               {{/with}}
-                            </div> <br>
+                            </div>
 
-                            <div>
+                            <div class="mb-4">
                               {{#with [1]}}
                                 <ul>
                                   <li>
@@ -173,10 +173,10 @@
                               {{/with}}
                             </div>
                           {{/with}}
-                        </div> <br> <hr>
+                        </div> <hr>
 
-                        <div>
-                          <h4><em>Guide:</em></h4>
+                        <div class="mb-4">
+                          <h4 class="mb-3"><em>Guide:</em></h4>
                           {{#with guide}}
                             <ul>
                               <li>
@@ -186,7 +186,7 @@
                               </li>
                             </ul>
                           {{/with}}
-                        </div> <br> <hr>
+                        </div> <hr>
                       {{/with}}
                     </div>
                   </ul>

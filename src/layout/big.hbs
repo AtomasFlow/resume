@@ -13,7 +13,7 @@
     <link href='css/index.css' rel='stylesheet' />
 
     {{!-- style normalize --}}
-    <link href='css/normalize.css' rel='stylesheet' />
+    {{!-- <link href='css/normalize.css' rel='stylesheet' /> --}}
 
     {{!-- Bootstrap class --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -23,8 +23,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
   </head>
 
-  <body>
-    {{> nav}}
+  <body class="p-5">
+    
+    <div class="mb-5">
+      {{> nav}}
+    </div>
 
     <br>
     <hr>

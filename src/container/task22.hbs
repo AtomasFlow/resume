@@ -24,16 +24,15 @@
     <br>
 
     {{#with advantage}}
-      <section class="card">
+      <section class="card mb-4">
         <div class="card-body">
-          <div class="display-5">{{title}}</div
-          ><br>
+          <div class="display-5 mb-4">{{title}}</div>
 
           {{#with efficiency}}
-            <section class="card">
+            <section class="card mb-4">
               <div class="card-body">
-                <div class="display-4">{{title}}</div>
-                <br>
+                <div class="display-4 mb-4">{{title}}</div>
+
                 <h6>{{sub_title}}</h6>
                 <p>{{description}}</p>
                 <div>
@@ -42,32 +41,32 @@
               </div>
             </section>
           {{/with}}
-          <br>
+
 
           {{#with innovation}}
-            <section class="card">
+            <section class="card mb-4">
               <div class="card-body">
-                <div class="text-center">
-                  <div class="display-4">{{title}}</div>
-                  <br>
+                <div class="text-center mb-4">
+                  <div class="display-4 mb-4">{{title}}</div>
+
                   <h6>{{sub_title}}</h6>
                   <p>{{description}}</p>
-                </div> <br>
+                </div> 
                 <div><button class="btn btn-outline-warning">{{button}}</button></div>
               </div>
             </section>
           {{/with}}
-          <br>
+
 
           {{#with collaboration}}
             <section class="card">
               <div class="card-body">
-                <div class="text-end">
+                <div class="text-end mb-3">
                   <div class="display-4">{{title}}</div>
                   <br>
                   <h6>{{sub_title}}</h6>
                   <p>{{description}}</p>
-                </div> <br>
+                </div>
                 <div><button class="btn btn-outline-warning">{{button}}</button></div>
               </div>
             </section>
@@ -75,19 +74,17 @@
         </div>
       </section>
     {{/with}}
-    <br>
+
 
     {{#with agreement}}
       <section class="card">
         <div class="card-body">
-          <div class="display-5">{{title}}</div>
-          <br>
+          <div class="display-5 mb-4">{{title}}</div>
 
           {{#with info}}
             <div class="card">
               <div class="card-body">
-                <h5>{{sub_title}}</h5>
-                <br>
+                <h5 class="mb-4">{{sub_title}}</h5>
 
                 {{#with detail}}
                   <div class="card">

@@ -7,8 +7,8 @@ const router = express.Router()
 
 var header = {
   name: {
-    firstname: 'Ivan',
-    lastname: 'Ivanov',
+    firstname: 'Latun Vitalii',
+    lastname: 'Victorovich',
   },
   position: 'Junior Fullstack JS Developer',
   salary: '600$ в місяц',
@@ -37,11 +37,17 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/index', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    header,
+    page: {
+      title: 'Resume project',
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
