@@ -11,14 +11,14 @@
       <div class="mb-5">
         <h3 class="mb-4">{{title}}</h3>
 
-        <div class="mb-4">
+        <div class="mb-2">
           {{#each buttons}}
           {{#if @first}}
-          <button class="btn {{#if isPrimary}} btn-primary {{else}} btn-warning {{/if}}">{{text}}</button>
+          <button class="btn mb-2 {{#if isPrimary}} btn-primary {{else}} btn-warning {{/if}}">{{text}}</button>
           {{/if}}
           
           {{#if @last}}
-          <button class="btn {{#if isOutline}} btn-outline-primary {{else}} btn-outline-warning {{/if}}">{{text}}</button>
+          <button class="btn mb-2 {{#if isOutline}} btn-outline-primary {{else}} btn-outline-warning {{/if}}">{{text}}</button>
           {{/if}}
           {{/each}}
         </div>
@@ -260,7 +260,7 @@
 
     <div class="col-12">
       <hr>
-      {{> shopfooter data=footer}}
+      {{> shopfooter}}
     </div>
 
 

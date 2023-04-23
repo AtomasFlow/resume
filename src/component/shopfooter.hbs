@@ -1,33 +1,13 @@
-{{#with data}}
-<div class="row col-12">
-  <div class="col-2 nav">
-    {{#each [0]}}
-    <a class="nav-link pe-5 {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
+<div class="row">
+  <ul class="nav">
+    {{#each footer}}
+    <div class="col-2">
+      {{#each this}}
+      <li class="nav-item">
+        <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
+      </li>
+      {{/each}}
+    </div>
     {{/each}}
-  </div>
-
-  <div class="col-2 nav">
-    {{#each [1]}}
-    <a class="nav-link pe-5 {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
-    {{/each}}
-  </div>
-
-  <div class="col-2 nav">
-    {{#each [2]}}
-    <a class="nav-link pe-5 {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
-    {{/each}}
-  </div>
-
-  <div class="col-2 nav">
-    {{#each [3]}}
-    <a class="nav-link pe-5 {{#if @last}}  disabled {{/if}}" href="{{link}}">{{text}}</a>
-    {{/each}}
-  </div>
-
-  <div class="col-2 nav">
-    {{#each [4]}}
-    <a class="nav-link pe-5 {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
-    {{/each}}
-  </div>
+  </ul>
 </div>
-{{/with}}

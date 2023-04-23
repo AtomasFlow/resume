@@ -19,7 +19,7 @@
   {{!=========== productData ================}}
   <section class="col-12 row my-5">
     {{#with productData}}
-    <div class="col-6 mb-4 me-4">
+    <div class="col-6 mb-4 me-5">
       <img class="card-img-top mb-4" src="{{img}}" alt="Foto">
       <div class="card">
         <div class="card-body">
@@ -44,7 +44,7 @@
     </div>
     
     {{!=========== Table ================}}
-    <div class="col-5 ms-5 mb-4">
+    <div class="col-5 mb-4">
       {{#with item}}
       <div class="mb-4">
         <table class="table">
@@ -128,6 +128,6 @@
 
 
   <section class="col-12">
-    {{> shopfooter data=footer}}
+    {{> shopfooter}}
   </section>
 </main>

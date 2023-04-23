@@ -1,6 +1,7 @@
 <main>
   {{> shopheader data=navigation}}
-  {{!-- {{#with navigation}}
+
+  {{#with navigation}}
     <section class="col-12 mb-5">
       <div class="card">
         <div class="nav">
@@ -17,7 +18,7 @@
         </div>
       </div>
     </section>
-  {{/with}} --}}
+  {{/with}}
 
 
   {{#with newsBlock}}
@@ -94,7 +95,7 @@
   <hr>
 
 
-  <section class="col-12 row g-5 my-5">
-    {{> shopfooter data=footer}}
+  <section>
+    {{> shopfooter}}
   </section>
 </main>
