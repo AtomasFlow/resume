@@ -1,5 +1,5 @@
 {{#with heading}}
-  <div class="card">
+  <div class="card mb-5">
 
     {{#with main}}
       <div class="card-body">
@@ -50,10 +50,10 @@
     {{/with}}
   </div>
 {{/with}}
-<br> <br>
+
 
 {{#with nested_display}}
-  <div class="card">
+  <div class="card mb-5">
     <div class="display-1">{{title}}</div>
 
     {{#with children_display}}
@@ -70,16 +70,16 @@
       </div>
     {{/with}}
     
-    <div>
+    <div class="mb-4">
       <h6>{{header_text}}</h6>
       {{#with button}}
         <button class="btn btn-info">{{text}}</button>
       {{/with}}
     </div>
-    <br>
+
   </div>
 {{/with}}
-<br><br>
+
 
 {{#with paragraph}}
   <div class="card">

@@ -1,6 +1,6 @@
 <div>
-  <h1><em class="text-primary-emphasis">{{name}}</em></h1>
-  <br><hr>
+  <h1 class="mb-5"><em class="text-primary-emphasis">{{name}}</em></h1>
+  <hr>
   <div>
     <ul>
       <div class="text-secondary">{{price}}</div>
@@ -62,12 +62,12 @@
           {{#with ports}}
             <ul>
               <hr>
-              <div>
+              <div class="mb-3">
                 {{#with [0]}}
                   <ul>
-                    <li>
+                    <li class="mb-2">
                       <div>{{type}} / {{count}}</div>
-                    </li> <br>
+                    </li>
 
                     <div>
                       {{#each features}}
@@ -80,7 +80,7 @@
                     </div>
                   </ul>
                 {{/with}}
-              </div> <br>
+              </div>
 
               <div>
                 {{#with [1]}}
@@ -135,7 +135,7 @@
 
         <section>
           {{#with accessories}}
-            <div>
+            <div class="mb-4">
               {{#with [0]}}
                 <ul>
                   <li>
@@ -144,9 +144,9 @@
                   </li>
                 </ul>
               {{/with}}
-            </div> <br>
+            </div>
 
-            <div>
+            <div class="mb-4">
               {{#with [1]}}
                 <ul>
                   <li>
@@ -155,7 +155,7 @@
                   </li>
                 </ul>
               {{/with}}
-            </div> <br>
+            </div>
 
             <div>
               {{#with [2]}}

@@ -5,16 +5,16 @@
     {{#with web.languages}}
       <div>
         <ul>
-          <div>
+          <div class="mb-5">
             {{#with [0]}}
               <h2><em>HTML</em></h2>
               <ul>
-                <li>
+                <li class="mb-4">
                   <div> <abbr title="HTML">{{name}}</abbr></div>
                   <div>Version: <abbr title="Versia HTML">{{version}}</abbr></div>
                   <div>Description: {{description}}</div>
                 </li>
-                <br> <hr>
+                <hr>
 
                 <div>
                   <h3><em>Elements:</em></h3>
@@ -22,10 +22,10 @@
                     <div>
                       {{#with [0]}}
                         <ul>
-                          <li>
+                          <li class="mb-4">
                             <div>{{name}}</div>
                             <div>Description: {{description}}</div>
-                          </li> <br> <hr>
+                          </li> <hr>
 
                           <div>
                             <h4><em>Attributes:</em></h4>
@@ -33,10 +33,10 @@
                               <div>
                                 {{#with [0]}}
                                   <ul>
-                                    <li>
+                                    <li class="mb-4">
                                       <div>{{name}}</div>
                                       <div>Description: {{description}}</div>
-                                    </li> <br>
+                                    </li>
                                   </ul>
                                 {{/with}}
                               </div>
@@ -60,34 +60,34 @@
                 </div>
               </ul>
             {{/with}}
-          </div> <br> <hr> <br>
+          </div> <hr>
 
           <div>
             {{#with [1]}}
               <h2><em>CSS</em></h2>
               <ul>
-                <li>
+                <li class="mb-4">
                   <div><abbr title="{{name}}">{{name}}</abbr></div>
                   <div>Version: {{version}}</div>
                   <div>Description: {{description}}</div>
-                </li> <br> <hr>
+                </li> <hr>
 
                 <div>
-                  <h3><em>Properties:</em></h3>
+                  <h3 class="mb-3"><em>Properties:</em></h3>
                   <div>
                     {{#with properties}}
                       <div>
                         {{#with [0]}}
                           <ul>
-                            <li>
+                            <li class="mb-4">
                               <div>{{name}}</div>
                               <div>Description: {{description}}</div>
-                            </li> <br> <hr>
+                            </li> <hr>
 
                             <div>
-                              <h4><em>Values:</em></h4>
+                              <h4 class="mb-3"><em>Values:</em></h4>
                               {{#with values}}
-                                <div>
+                                <div class="mb-3">
                                   {{#with [0]}}
                                     <ul>
                                       <li>
@@ -96,16 +96,16 @@
                                       </li>
                                     </ul>
                                   {{/with}}
-                                </div> <br>
+                                </div>
 
                                 <div>
                                   {{#with [1]}}
-                                    <ul>
+                                    <ul class="mb-4">
                                       <li>
                                         <div>{{value}}</div>
                                         <div>{{description}}</div>
                                       </li> 
-                                    </ul> <br>
+                                    </ul>
                                     <hr>
                                   {{/with}}
                                 </div>
@@ -116,18 +116,18 @@
                       </div>
                       
                       <div>
-                        <h3><em>Background-color:</em></h3>
+                        <h3 class="mb-3"><em>Background-color:</em></h3>
                         {{#with [1]}}
                           <ul>
-                            <li>
+                            <li class="mb-4">
                               <div>{{name}}</div>
                               <div>{{description}}</div>
-                            </li> <br> <hr>
+                            </li> <hr>
 
                             <div>
-                              <h4><em>Values:</em></h4>
+                              <h4 class="mb-3"><em>Values:</em></h4>
                               {{#with values}}
-                                <div>
+                                <div class="mb-4">
                                   {{#with [0]}}
                                     <ul>
                                       <li>
@@ -136,7 +136,7 @@
                                       </li>
                                     </ul>
                                   {{/with}}
-                                </div> <br>
+                                </div>
 
                                 <div>
                                   {{#with [1]}}
