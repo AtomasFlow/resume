@@ -30,13 +30,13 @@
                 {{/with}}
 
                 {{#with [1]}}
-                  {{> user data=id data=naem data=gender data=age userLine=true}}
+                  {{> user data=id data=name data=gender data=age userLine=true}}
 
                   <ul>
                     <h5 class="mb-3"><em class="badge text-bg-light">Mutual friends:</em></h5>
                     {{#with mutual_friends}}
                       {{#with [0]}}
-                        {{> user data=id data=naem data=gender data=age }}
+                        {{> user data=id data=name data=gender data=age }}
                       {{/with}}
                     {{/with}}
                   </ul>
@@ -65,7 +65,7 @@
                       {{#with members}}
 
                         {{#with [0]}}
-                          {{> user data=id data=naem data=gender data=age}}
+                          {{> user data=id data=name data=gender data=age}}
                         {{/with}}
 
                       {{/with}}
@@ -89,12 +89,12 @@
                       {{#with members}}
 
                         {{#with [0]}}
-                          {{> user data=id data=naem data=gender data=age userLine=true}}
+                          {{> user data=id data=name data=gender data=age userLine=true}}
                         {{/with}}
                         <br> 
 
                         {{#with [1]}}
-                          {{> user data=id data=naem data=gender data=age}}
+                          {{> user data=id data=name data=gender data=age}}
                         {{/with}}
 
                       {{/with}}
