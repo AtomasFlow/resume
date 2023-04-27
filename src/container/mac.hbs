@@ -9,53 +9,63 @@
 
       {{#with features}}
         <section>
-          {{#with processor}}
-            <ul>
+            <ul> 
               <li>
-                <div>{{brand}} / {{model}} / {{speed}} / {{cores}} /{{cache}}</div>
+                <div>
+                  {{#each processor}}
+                  {{this}} {{> line line=true}}
+                  {{/each}}
+                </div>
               </li>
             </ul>
-          {{/with}}
         </section>
 
         <section>
-          {{#with memory}}
             <ul>
               <li>
-                <div>{{type}} / {{size}} / {{speed}}</div>
+                <div>
+                  {{#each memory}}
+                  {{this}} {{> line line=true}}
+                  {{/each}}
+                </div>
               </li>
             </ul>
-          {{/with}}
         </section>
 
         <section>
-          {{#with storage}}
             <ul>
               <li>
-                <div>{{type}} / {{size}}</div>
+                <div>
+                  {{#each storage}}
+                  {{this}} {{> line line=true}}
+                  {{/each}}
+                </div>
               </li>
             </ul>
-          {{/with}}
         </section>
 
         <section>
-          {{#with display}}
             <ul>
               <li>
-                <div>{{size}} / {{resolution}} / {{technology}} / {{color_space}} / {{brightness}} / {{refresh_rate}}</div>
+                <div>
+                  {{#each display}}
+                  {{this}} {{> line line=true}}
+                  {{/each}}
+                </div>
               </li>
             </ul>
-          {{/with}}
         </section>
 
         <section>
-          {{#with graphics}}
             <ul>
               <li>
-                <div>{{brand}} / {{model}} / {{memory}}</div>
+                <div>
+                  {{#each graphics}}
+                  {{this}} {{> line line=true}}
+                  {{/each}}
+                </div>
               </li>
             </ul>
-          {{/with}}
         </section>
 
         <section>
@@ -98,13 +108,15 @@
         </section>
 
         <section>
-          {{#with battery}}
             <ul>
               <li>
-                <div>{{type}} / {{capacity}} / {{life}}</div>
+                <div>
+                  {{#each battery}}
+                  {{this}} {{> line line=true}}
+                  {{/each}}
+                </div>
               </li>
             </ul>
-          {{/with}}
         </section>
 
         <section>
@@ -116,13 +128,15 @@
         </section>
 
         <section>
-          {{#with dimensions}}
             <ul>
               <li>
-                <div>{{height}} / {{width}} / {{depth}}</div>
+                <div>
+                  {{#each dimensions}}
+                  {{this}} {{> line line=true}}
+                  {{/each}}
+                </div>
               </li>
             </ul>
-          {{/with}}
         </section>
 
         <section>
@@ -134,40 +148,17 @@
         </section> <hr>
 
         <section>
-          {{#with accessories}}
+         
+            {{#each accessories}}
             <div class="mb-4">
-              {{#with [0]}}
-                <ul>
-                  <li>
-                    <div>{{name}}</div>
-                    <div>{{price}}</div>
-                  </li>
-                </ul>
-              {{/with}}
+            <ul>
+              <li>
+                <div>{{name}}</div>
+                <div>{{price}}</div>
+              </li>
+            </ul>
             </div>
-
-            <div class="mb-4">
-              {{#with [1]}}
-                <ul>
-                  <li>
-                    <div>{{name}}</div>
-                    <div>{{price}}</div>
-                  </li>
-                </ul>
-              {{/with}}
-            </div>
-
-            <div>
-              {{#with [2]}}
-                <ul>
-                  <li>
-                    <div>{{name}}</div>
-                    <div>{{price}}</div>
-                  </li>
-                </ul>
-              {{/with}}
-            </div>
-          {{/with}}
+            {{/each}}
         </section>
       {{/with}}
     </ul>

@@ -2,8 +2,8 @@
   {{#with person}}
     <div class="mb-4">
       <h1>{{name}}</h1>
-      <div><span> <em>Age:</em> {{age}} </span> </div> <br>
-      <div><span> <em>Gender:</em> {{gender}}</span> </div>
+      <div> <em>Age:</em> {{age}}</div> <br>
+      <div> <em>Gender:</em> {{gender}}</div>
       <hr>
     </div>
 
@@ -12,15 +12,13 @@
       <div>
         <address>
           <ul>
-            {{#with address}}
-            <li>
-              <div>Street: {{street}}</div>
-              <div>City: {{city}}</div>
-              <div>State: {{state}}</div>
-              <div>Zip: {{zip}}</div>
-              <div>Country: {{country}}</div>
+            <li class="text-capitalize">
+              {{#each address}}
+              <div>
+                {{@key}}: {{this}}
+              </div>
+              {{/each}}
             </li>
-            {{/with}}
           </ul>
         </address>
         <hr>
@@ -30,9 +28,13 @@
     <div class="mb-4">
       <h3><em>Education:</em></h3>
       <ul>
-        {{#each education.[0]}}
-        <li>{{this}}</li>
-        {{/each}}
+        <li>
+          {{#each education.[0]}}
+          <div>
+            <span class="text-capitalize">{{@key}}:</span> {{this}}
+          </div>
+          {{/each}}
+        </li>
       </ul>
       <hr>
     </div>
@@ -128,30 +130,17 @@
 
                                           <div>
                                             <h4><em>Team members:</em></h4>
-                                            {{#with team_members}}
-                                              <div class="mb-3">
-                                                {{#with [0]}}
-                                                  <ul>
-                                                    <li>
-                                                      <div>{{name}}</div>
-                                                      <div>{{title}}</div>
-                                                    </li>
-                                                  </ul>
-                                                {{/with}}
-                                              </div>
-
-                                              <div class="mb-4">
-                                                {{#with [1]}}
-                                                  <ul>
-                                                    <li>
-                                                      <div>{{name}}</div>
-                                                      <div>{{title}}</div>
-                                                    </li>
-                                                  </ul>
-                                                {{/with}}
-                                              </div>
-                                              <hr>
-                                            {{/with}}
+                                            {{#each team_members}}
+                                            <div class="mb-3">
+                                              <ul>
+                                                <li>
+                                                  <div>Name: {{name}}</div>
+                                                  <div>Title: {{title}}</div>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                            {{/each}}
+                                            <hr>
                                           </div>
                                         {{/with}}
                                       </div>

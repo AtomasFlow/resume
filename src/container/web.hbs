@@ -23,35 +23,22 @@
                       {{#with [0]}}
                         <ul>
                           <li class="mb-4">
-                            <div>{{name}}</div>
+                            <div>Name: {{name}}</div>
                             <div>Description: {{description}}</div>
                           </li> <hr>
 
                           <div>
                             <h4><em>Attributes:</em></h4>
-                            {{#with attributes}}
-                              <div>
-                                {{#with [0]}}
-                                  <ul>
-                                    <li class="mb-4">
-                                      <div>{{name}}</div>
-                                      <div>Description: {{description}}</div>
-                                    </li>
-                                  </ul>
-                                {{/with}}
-                              </div>
-
-                              <div>
-                                {{#with [1]}}
-                                  <ul>
-                                    <li>
-                                      <div>{{name}}</div>
-                                      <div>Description: {{description}}</div>
-                                    </li>
-                                  </ul>
-                                {{/with}}
-                              </div>
-                            {{/with}}
+                            {{#each attributes}}
+                            <div>
+                              <ul>
+                                <li class="mb-4">
+                                  <div>Name: {{name}}</div>
+                                  <div>Description: {{description}}</div>
+                                </li>
+                              </ul>
+                            </div>
+                            {{/each}}
                           </div>
                         </ul>
                       {{/with}}
