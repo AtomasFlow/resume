@@ -148,7 +148,7 @@
 
       <div class="card-body row">
         {{#each contactData}}
-        <div class="card col-4 me- p-2 ">
+        <div class="card col-4 p-2 ">
           <p class="mb-1">{{title}}</p>
           <strong class="mb-2">{{value}}</strong>
       
@@ -156,13 +156,12 @@
           {{#with ../buttons.[0]}}
           <a class="btn col-6
             {{#if isPrimary}} btn-primary {{/if}}
-            {{#if isSeccondary}} btn-seccondary {{/if}}
+            {{#if isSecondary}} btn-secondary {{/if}}
             {{#if isDanger}} btn-danger {{/if}}" href="{{link}}">
             {{text}}
           </a>
           {{/with}}
           {{/if}}
-      
 
           {{#if @last}}
           {{#with ../buttons.[2]}}
@@ -178,11 +177,16 @@
         </div>
         {{/each}}
 
-        {{!-- {{#with ../buttons.[1]}}
-        <div class="d-flex justify-content-center">
-          <a class="btn col-4  {{#if isSecondary}} btn-secondary {{/if}}" href="{{link}}">{{text}}</a>
-        </div>
-        {{/with}} --}}
+        {{#if ../buttons}}
+        {{#each ../buttons}}
+        <a class="btn col-4
+          {{#if isPrimary}} btn-primary {{/if}}
+          {{#if isSecondary}} btn-secondary {{/if}}
+          {{#if isDanger}} btn-danger {{/if}}" href="{{link}}">
+          {{text}}
+        </a>
+        {{/each}}
+        {{/if}}
 
         {{/with}}
       </div>
